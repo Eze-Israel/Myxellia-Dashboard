@@ -12,7 +12,7 @@ import { FaCalculator} from "react-icons/fa6";
 const Header1 = () => {
   return (
     <div>
-    <header className="w-full bg-black text-white flex items-center justify-between px-[100px] py-4">
+    <header className="w-full bg-black text-white flex items-center justify-between md:px-[100px] py-4">
     <h1 className='flex items-center'><LucideStar size={30}/> <b className='text-4xl'>myxellia</b></h1>
      <div className="container flex h-16 items-center gap-3">
         <div className="ml-auto flex items-center gap-2">
