@@ -1,6 +1,6 @@
-import Layout from "@/components/Layout";
 import SalesOverview from "@/components/SalesOverView";
 import ListingOverview from "@/components/ListingOverView";
+import FeaturedListingsRow from "@/components/FeaturedListingsRow";
 
 
 export default function Home() {
@@ -12,10 +12,12 @@ export default function Home() {
         <div className="xl:col-span-8">
           <SalesOverview />
         </div>
-        <div className="xl:col-span-4">
+        <div className="xl:col-span-4 mb-6">
           <ListingOverview />
+
         </div>
       </div>
+          <FeaturedListingsRow/>
     </main>
   );
 }
