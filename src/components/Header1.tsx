@@ -15,6 +15,7 @@ import "react-calendar/dist/Calendar.css";
 
 
 
+
 function Tip({
   label,
   children,
@@ -247,11 +248,12 @@ const Header1 = () => {
         </AnimatePresence>
       </header>
 
-      {/* ===== Budgeting Modal (centered) ===== */}
+        {/*Budgeting Modal Pop  */}
+
       <AnimatePresence>
         {showBudget && (
           <motion.div
-            className="fixed inset-2 z-[60] flex items-center justify-center bg-black/50"
+            className="absolute top-2/12 right-0 bottom-0 left-0 z-[60] flex items-center justify-center bg-black/70 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -263,7 +265,6 @@ const Header1 = () => {
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.18 }}
             >
-              {/* Blue header with icon */}
               <div className="bg-[#0A2540] px-4 py-6 text-center">
                 <div className="bg-gray-900 rounded-lg px-6 py-8">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl  ring-1 ">
@@ -277,35 +278,49 @@ const Header1 = () => {
               </div>
 
               {/* Body */}
-              <div className="px-8 py-6 space-y-4 text-sm text-gray-800">
-                <div  >
+              <div className="px-8 py-6 space-y-4 text-sm text-gray-800 ">
+
+                <div  className="flex items-center justify-between gap-3">
                   <div>
-                  <img  src="/images/setting.png"/>
-                  <div className="font-semibold">
+                  <img  src="/images/setting.png" className="w-5 h-5"/>
+                  </div>
+                  <div>
+                  <h3 className="font-semibold">
                     Set up annual budgets by account category
-                  </div>
-                  </div>
-                  <div className="text-gray-600">
+                  </h3>
+                  <p className="text-gray-600">
                     Allocate funds across income and expense lines with full
                     visibility.
+                  </p>
                   </div>
                 </div>
-                <div>
-                  <div className="font-semibold">
-                    Track actuals vs budget in real time
+
+                <div  className="flex items-center justify-between gap-3">
+                  <div>
+                  <img  src="/images/trend.png" className="w-8 h-5"/>
                   </div>
-                  <div className="text-gray-600">
+                  <div>
+                  <h3 className="font-semibold">
+                    Track actuals vs budget in real time
+                  </h3>
+                  <p className="text-gray-600">
                     See how your community is performing against plan, month by
                     month.
+                  </p>
                   </div>
                 </div>
-                <div>
-                  <div className="font-semibold">
-                    Adjust figures and forecast with ease
+                <div  className="flex items-center justify-between gap-3">
+                  <div>
+                  <img  src="/images/align.png" className="w-8 h-6"/>
                   </div>
-                  <div className="text-gray-600">
+                  <div>
+                  <h3 className="font-semibold">
+                    Adjust figures and forecast with ease
+                  </h3>
+                  <p className="text-gray-600">
                     Edit amounts, apply percentage changes, or roll forward last
                     year’s data—all in one place.
+                  </p>
                   </div>
                 </div>
 
@@ -320,24 +335,26 @@ const Header1 = () => {
         )}
       </AnimatePresence>
 
-      {/* ===== Calendar Modal (centered) ===== */}
+      {/*  Calendar Modal  */}
       <AnimatePresence>
         {showCalendar && (
           <motion.div
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40"
+            className="absolute top-2/12 right-0 bottom-0 left-0 z-[60] flex items-center justify-center bg-black/40 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            
           >
+            
             <motion.div
-              className="dropdown-content overflow-hidden rounded-2xl bg-white p-5 shadow-2xl"
+              className="dropdown-content overflow-hidden rounded-2xl bg-black p-8 shadow-2xl h-[500px] p-4 rounded-lg "
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.18 }}
             >
               {/* November by default (month index 10) */}
-              <Calendar defaultActiveStartDate={new Date(2024, 10, 1)} />
+              <Calendar defaultActiveStartDate={new Date(2023, 10, 16)}  calendarType="hebrew" className="w-full h-full "/>
             </motion.div>
           </motion.div>
         )}

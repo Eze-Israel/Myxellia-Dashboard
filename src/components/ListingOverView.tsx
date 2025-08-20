@@ -49,7 +49,7 @@ export default function ListingOverview() {
       </Card>
 
       {/* Users Overview */}
-      <Card className="rounded-2xl border border-gray-200 bg-white">
+      <Card className="rounded-2xl border border-gray-200 bg-white p-2">
         <Header icon={<Users className="w-5 h-5" />} title="Users Overview" />
         <CardContent className="flex justify-between">
           <Stat label="Total" value="20.7k" />

@@ -136,7 +136,7 @@ export default function SalesOverview() {
       {/* DASH-B */}
       <div className="flex md:flex-row md:items-center md:justify-between px-2 mb-4 ">
         <div>
-          <h2 className="text-xl font-extrabold tracking-tight">Sales Overview</h2>
+          <h2 className="text-xl font-extrabold tracking-tight p-2">Sales Overview</h2>
           <p className="text-sm text-gray-600 mt-2">Showing overview Jan 2022 - Sep 2022</p>
         </div>
         <button
@@ -157,7 +157,7 @@ export default function SalesOverview() {
 
       {/* Body */}
       <div className="grid grid-cols-2 gap-6 p-3 ">
-        {/* Chart */}
+        {/* Chart begins here*/}
         {/* <div className="overflow-x-auto"> */}
           <div className="h-[160px] " style={{ minWidth: innerWidth }}>
             <ResponsiveContainer width="100%" height="100%">
@@ -178,7 +178,6 @@ export default function SalesOverview() {
           </div>
         {/* </div> */}
 
-        {/* KPI tiles */}
         <div className="grid grid-cols-2 gap-2 ">
           <Stat label="Total Inflow"        value={120_000_000} delta={0.025} positive amountClassName="text-indigo-600 text-xs" />
           <Stat label="MRR"                 value={50_000_000}  delta={0.025} positive amountClassName="text-emerald-600 text-xs" />
