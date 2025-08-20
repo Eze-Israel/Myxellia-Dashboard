@@ -79,7 +79,7 @@ const Header1 = () => {
           href="#"
           className="flex text-3xl p-2 items-center rounded-lg"
         >
-          <img src="/images/vector.png" alt="logo" />
+          <img src="/images/Vector.png" alt="logo" />
           <span className="md:ml-2">myxellia</span>
         </a>
 
