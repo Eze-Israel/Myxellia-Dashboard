@@ -80,7 +80,7 @@ const Header1 = () => {
           className="flex text-3xl p-2 items-center rounded-lg"
         >
           <img src="/images/vector.png" alt="logo" />
-          <span className="ml-2">myxellia</span>
+          <span className="md:ml-2">myxellia</span>
         </a>
 
         <div className="container flex h-16 items-center gap-3">

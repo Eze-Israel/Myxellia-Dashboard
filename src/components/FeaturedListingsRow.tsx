@@ -63,7 +63,7 @@ function FeaturedCard({
 
   return (
     <div
-      className="relative w-1/3 h-64 rounded-2xl overflow-hidden"
+      className="relative md:w-1/3 w-full h-64 rounded-2xl overflow-hidden"
       onMouseEnter={pause}
       onMouseLeave={resume}
     >
@@ -94,7 +94,7 @@ function FeaturedCard({
         </motion.div>
       </AnimatePresence>
 
-      {/* Pagination dots (centered) */}
+      {/* Pagination dots */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
         {safeSlides.map((_, dotIndex: number) => (
           <button
@@ -113,7 +113,7 @@ function FeaturedCard({
 /** The 3-card featured listing strip */
 export default function FeaturedListing() {
   return (
-    <div className="w-full flex gap-4 overflow-hidden">
+    <div className="w-full flex md:flex-row flex-col gap-4 overflow-hidden">
       <FeaturedCard slides={buildDeck(0)} />
       <FeaturedCard slides={buildDeck(1)} />
       <FeaturedCard slides={buildDeck(2)} />

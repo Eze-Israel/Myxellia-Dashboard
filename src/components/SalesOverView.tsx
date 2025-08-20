@@ -141,7 +141,7 @@ export default function SalesOverview() {
         </div>
         <button
             type="button"
-            className="rounded-full  border border-gray-300 px-6 py-2.5 text-sm  bg-white hover:bg-gray-100"
+            className="rounded-full  border border-gray-300 md:px-6 md:py-2.5 text-sm  bg-white hover:bg-gray-100"
           >
             View Transactions
           </button>
@@ -156,7 +156,7 @@ export default function SalesOverview() {
       <div className="h-px bg-gray-200" />
 
       {/* Body */}
-      <div className="grid grid-cols-2 gap-6 p-3 ">
+      <div className="grid md:grid-cols-2 gap-6 p-3 ">
         {/* Chart begins here*/}
         {/* <div className="overflow-x-auto"> */}
           <div className="h-[160px] " style={{ minWidth: innerWidth }}>
@@ -178,7 +178,7 @@ export default function SalesOverview() {
           </div>
         {/* </div> */}
 
-        <div className="grid grid-cols-2 gap-2 ">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-2 ">
           <Stat label="Total Inflow"        value={120_000_000} delta={0.025} positive amountClassName="text-indigo-600 text-xs" />
           <Stat label="MRR"                 value={50_000_000}  delta={0.025} positive amountClassName="text-emerald-600 text-xs" />
           <Stat label="Commission Revenue"  value={200_000_000} delta={0.005} positive amountClassName="text-emerald-400 text-xs " />

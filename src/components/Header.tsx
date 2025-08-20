@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Header: FC = () => {
   return (
-    <nav className="w-full bg-white text-black flex items-center justify-between md:px-[80px] py-6">
+    <nav className="w-full bg-white text-black md:flex items-center justify-between md:px-[80px] py-6">
         <Link href="/" className="flex text-sm items-center gap-2 hover:bg-gray-200 p-2 px-6 rounded-lg text-lg hover:font-bold">
           <Home size={20} /> Dashboard
         </Link>
