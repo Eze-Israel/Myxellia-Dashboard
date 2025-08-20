@@ -16,7 +16,7 @@ const BASE_SLIDES: Slide[] = [
   { title: "HOTTEST LISTING",   subtitle: "Urban Prime Plaza Premiere", img: "/images/photo3.png" },
 ];
 
-/** Built a deck for each card, rotating the base set so cards aren’t identical */
+/* Built a deck for each card, rotating the base set so cards aren’t identical */
 function buildDeck(offset: number, count = BASE_SLIDES.length): Slide[] {
   const arr: Slide[] = [];
   for (let i = 0; i < count; i++) {
@@ -25,7 +25,7 @@ function buildDeck(offset: number, count = BASE_SLIDES.length): Slide[] {
   return arr;
 }
 
-/** Single card/carousel */
+/* Single card/carousel */
 function FeaturedCard({
   slides,
   autoRotateMs = 4000,
@@ -110,7 +110,7 @@ function FeaturedCard({
   );
 }
 
-/** The 3-card featured listing strip */
+/* The 3-card featured listing strip */
 export default function FeaturedListing() {
   return (
     <div className="w-full flex md:flex-row flex-col gap-4 overflow-hidden">

@@ -128,7 +128,7 @@ export default function SalesOverview() {
   const [range, setRange] = useState<Range>("1y");
   const chartData = useMemo(() => DATA[range], [range]);
 
-  const pixelsPerCategory = 20; // bar group width
+  const pixelsPerCategory = 20; // for  bar group width
   const innerWidth = Math.max(chartData.length * pixelsPerCategory + 20, 200);
 
   return (
@@ -168,7 +168,7 @@ export default function SalesOverview() {
                 <Tooltip formatter={(v: number) => NGN.format(v)} />
 
                 {/* <Legend /> */}
-                {/* Fixed bar size for consistent look across ranges */}
+                {/* bar size for consistent look across ranges */}
                 <Bar dataKey="Totalinflow"         name="Total Inflow"        fill="#3B82F6" radius={[6, 6, 0, 0]} barSize={10} />
                 <Bar dataKey="mrr"                  name="MRR"                 fill="#10B981" radius={[6, 6, 0, 0]} barSize={10} />
                 <Bar dataKey="GMV"                  name="GMV"                 fill="#EF4444" radius={[6, 6, 0, 0]} barSize={10} />
