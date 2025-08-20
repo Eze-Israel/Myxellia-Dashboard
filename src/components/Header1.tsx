@@ -77,13 +77,13 @@ const Header1 = () => {
       <header className="w-full bg-black text-white flex items-center justify-between md:px-[80px] py-4 relative">
         <a
           href="#"
-          className="flex text-3xl p-2 items-center rounded-lg"
+          className="flex md:text-3xl text-2xl p-2 items-center rounded-lg"
         >
           <img src="/images/Vector.png" alt="logo" />
-          <span className="md:ml-2">myxellia</span>
+          <span className="md:ml-1">myxellia</span>
         </a>
 
-        <div className="container flex h-16 items-center gap-3">
+        <div className="container flex h-16 items-center md:gap-3">
           <div className="ml-auto flex items-center gap-4">
             {/* Notifications */}
             <button className="icon-btn">
@@ -155,7 +155,7 @@ const Header1 = () => {
           </div>
         </div>
 
-        {/* Profile Dropdown (top-right) */}
+        {/* Profile Dropdown*/}
         <AnimatePresence>
           {showProfile && (
             <motion.div
@@ -163,7 +163,7 @@ const Header1 = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -6 }}
               transition={{ duration: 0.18 }}
-              className="profile-menu absolute right-18 top-2/2 z-50"
+              className="profile-menu absolute md:right-18 top-2/2 z-50"
             >
               <div className="w-[360px] overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5">
                 {/* Header */}
